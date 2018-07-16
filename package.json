@@ -3,16 +3,20 @@
   "version": "0.0.1",
   "description": "Batten Down the Hatches, Yarr Module Is Ready To Sail",
   "scripts": {
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [ "dependency injection", "timbers" ],
+  "author": "mjurczyk",
   "license": "MIT",
   "devDependencies": {
     "jest": "^23.4.1",
     "reflect-metadata": "^0.1.12",
     "ts-jest": "^23.0.0"
   },
-  "module": "src/index.ts",
-  "main": "src/index.ts"
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
 }
