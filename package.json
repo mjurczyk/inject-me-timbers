@@ -2,7 +2,6 @@
   "name": "inject-me-timbers",
   "version": "0.0.1",
   "description": "Batten Down the Hatches, Yarr Module Is Ready To Sail",
-  "main": "index.js",
   "scripts": {
     "test": "jest --config jestconfig.json"
   },
@@ -14,5 +13,6 @@
     "reflect-metadata": "^0.1.12",
     "ts-jest": "^23.0.0"
   },
-  "module": "src/index.ts"
+  "module": "src/index.ts",
+  "main": "src/index.ts"
 }
